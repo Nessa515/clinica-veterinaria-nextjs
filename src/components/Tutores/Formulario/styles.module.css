@@ -1,0 +1,48 @@
+.formulario{
+    justify-content: center;
+    position: relative;
+    left: 500px;
+    margin-top: 40px;
+}
+
+.formulario form{
+    padding-left: 70px;
+    position: absolute;
+    background-color: azure;
+    width: 600px;
+    height: 600px;
+}
+
+.formulario h2{
+    margin: 20px 0 0 100px;
+}
+
+.formulario button{
+    height: 50px;
+    width: 80px;
+    background-color: antiquewhite;
+    color: black;
+    border-radius: 10px;
+    float: right;
+    margin-right: 130px;
+    margin-top: 40px;
+}
+
+.formulario label{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.formulario input{
+    background-color: white;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+.formulario span{
+    margin-right: 20px;
+}
