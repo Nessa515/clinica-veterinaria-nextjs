@@ -2,7 +2,6 @@ import styles from './styles.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 const Formulario = () => {
 
 
@@ -12,35 +11,27 @@ const Formulario = () => {
     const [email, setEmail] = useState('');
     const [date_of_birth, setDate_of_birth] = useState('');
     const [zip_code, setZip_code] = useState('');
-
-        useEffect(() => {
-
-            try {
-                const tutor = {
-                    name,
-                    password,
-                    phone,
-                    email,
-                    date_of_birth,
-                    zip_code
-                }
-            } catch (error) {
-                const postTutors =  async () => {
-                    axios.post("http://localhost:4000/tutor")
-                    .then(response => useTutors(response.data))
-                    .catch(error => console.log(error));
-                }      
-                postTutors();
-            }
-            
-            
-        }, [name, password, phone, email, date_of_birth, zip_code])
-
-        
+    
         const aoSalvar = async (evento) => {
             evento.preventDefault();
-            console.log("Submetido");   
-        }
+
+            const tutor = {
+                name,
+                password,
+                phone,
+                email,
+                date_of_birth,
+                zip_code
+            }
+            const resposta = await fetch("http://localhost:4000/tutor", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(tutor),
+            });
+            console.log("Submetido"); 
+        };
 
     return(
         <div className={styles.formulario}>
@@ -59,8 +50,8 @@ const Formulario = () => {
                 <label>
                     <span>Passsword:</span>
                     <input 
-                        type="password'"
-                        name="password'"
+                        type="text"
+                        name="password"
                         placeholder='Digite sua senha:'
                         onChange={(evento) => setPassword(evento.target.value)}
                         value={password}
@@ -79,7 +70,7 @@ const Formulario = () => {
                 <label>
                     <span>Email:</span>
                     <input 
-                        type="email"
+                        type="text"
                         name="email" 
                         placeholder='Digite seu email:'
                         onChange={(evento) => setEmail(evento.target.value)}
@@ -89,7 +80,7 @@ const Formulario = () => {
                 <label>
                     <span>Date of Birth:</span>
                     <input 
-                        type="string" 
+                        type="text" 
                         name="date_of_birth" 
                         placeholder='Digite sua data:'
                         onChange={(evento) => setDate_of_birth(evento.target.value)}
@@ -99,7 +90,7 @@ const Formulario = () => {
                 <label>
                     <span>Zip Code:</span>
                     <input 
-                        type="string" 
+                        type="text" 
                         name="zip_code" 
                         placeholder='Digite seu zipCode:'
                         onChange={(evento) => setZip_code(evento.target.value)}
