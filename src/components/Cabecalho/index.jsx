@@ -10,34 +10,34 @@ const Cabecalho = () => {
             <nav className={styles.navigation}>
             <ul>
                 <li>
-                    <Link href='/auth'>
+                    <a href='/auth'>
                         <div>
                             <span className={styles.home}>Login</span>
                         </div>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='/'>
+                    <a href='/'>
                         <div>
                             <span className={styles.home}>Home</span>
                         </div>
-                    </Link>
+                    </a>
                 </li>
 
                 <li>
-                    <Link href='/pets'>
+                    <a href='/pets'>
                         <div className={styles.pet}>
                             <span className={styles.pets}>Pets</span>
                         </div>
-                    </Link>
+                    </a>
                 </li>
 
                 <li>
-                    <Link href='/tutor'>
+                    <a href='/tutor'>
                         <div className={styles.menu}>
                             <span className={styles.tutores}>Tutores</span>
                         </div>
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </nav>

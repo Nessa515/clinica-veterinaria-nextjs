@@ -1,6 +1,5 @@
 import styles from './styles.module.css';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 
 const Formulario = () => {
 
@@ -48,7 +47,7 @@ const Formulario = () => {
                     />
                 </label>
                 <label>
-                    <span>Passsword:</span>
+                    <span>Password:</span>
                     <input 
                         type="text"
                         name="password"
