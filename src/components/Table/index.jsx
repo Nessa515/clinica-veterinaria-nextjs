@@ -20,22 +20,7 @@ const Table = () => {
         getTutors()
     }, []);
 
-    // const tableRows = []
-
-    // for(let i = 0; i < tutors.length; i++){
-    //     const tutor = tutors[i];
-    //     tableRows.push(
-    //         <tr>
-    //             <td>{tutor.id}</td>
-    //             <td>{tutor.name}</td>
-    //             <td>{tutor.password}</td>
-    //             <td>{tutor.phone}</td>
-    //             <td>{tutor.email}</td>
-    //             <td>{tutor.date_of_birth}</td>
-    //             <td>{tutor.zip_code}</td>
-    //         </tr>
-    //     );
-    // }
+    // Tabela para exibir lista de tutores e pets
 
     const tableHeaders = (
         <tr>

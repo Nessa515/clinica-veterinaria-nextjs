@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styles from './styles.module.css';
 
+// Cabeçalho com o menu de navegação
+
 const Cabecalho = () => {
     return(
         <header className={styles.cabecalho}>
