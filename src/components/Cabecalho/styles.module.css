@@ -1,8 +1,9 @@
 .cabecalho{
-    background-color: white;
+    background-color: #f0ddee;
     box-shadow: 0 0 5px 0;
     height: 80px;
     font-family: sans-serif, 'Quicksand';
+
 }
 
 .cabecalho h1{
@@ -11,12 +12,12 @@
 }
 
 .navigation{
-    
     float: right;
 }
 
 .navigation ul{
     list-style: none;
+    text-decoration: none;
 }
 
 .navigation li{
@@ -27,8 +28,8 @@
 }
 
 .navigation li span:hover{
-    background:#333;
-    color:#fff;
+    background:#ffff;
+    color: black;
     box-shadow:0 3px 10px 0 #CCC;
     box-shadow:0 3px 10px 0 #ccc;
     text-shadow:0px 0px 5px #fff;
