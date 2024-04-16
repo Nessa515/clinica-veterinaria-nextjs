@@ -14,8 +14,6 @@ const Table = () => {
         .catch(error => console.log(error));
     };
 
-    console.log(tutors);
-
     useEffect(() => {
         getTutors()
     }, []);
@@ -32,9 +30,9 @@ const Table = () => {
             <th>Date of Birth</th>
             <th>Zip Code</th>
         </tr>
-    )
+    );
 
-    const renderTableRows = () => {
+    const tableRows = () => {
         return tutors.map((tutor) => (
             <tr key={tutor.id}>
                 <td>{tutor.id}</td>
@@ -53,7 +51,7 @@ const Table = () => {
             <table className={styles.table}> 
                 <tbody>
                     {tableHeaders}
-                    {renderTableRows}
+                    {tableRows()}
                 </tbody>
             </table>
         </div>
